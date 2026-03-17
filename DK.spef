@@ -1,0 +1,63 @@
+*SPEF "IEEE 1481-1998"
+*DESIGN "soc_top"
+*DATE "Tue Mar 17 2026"
+*VENDOR "ExampleEDA"
+*PROGRAM "rcx"
+*VERSION "1.0"
+*DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 PS
+*C_UNIT 1 FF
+*R_UNIT 1 OHM
+*L_UNIT 1 HENRY
+
+*NAME_MAP
+*1 top/u_cpu/data_bus[3]
+*2 top/u_mem/macro0/A
+*3 top/u_mem/macro0/Z
+*4 top/u_cpu/u_alu/n1
+*5 top/u_pad/IO0
+*6 VSS
+*7 top/u_clk/clk_buf/Y
+*8 top/u_cpu/u_alu/n2
+*9 top/u_cpu/u_alu/n3
+*10 top/u_cpu/u_alu/n4
+*PORTS
+
+*D_NET *1 0.0245
+*CONN
+*P *1 I *C 2.0e-15 0.0e+00
+*I *2 O *C 3.1e-15 0.0e+00
+*I *4 B *C 1.2e-15 0.0e+00
+*I *5 O *C 2.7e-15 0.0e+00
+*CAP
+1 *1 0.0012
+2 *1:1 *2:3 0.0041
+3 *4 *6 0.0022
+4 *2:2 *5:1 0.0018
+5 *1 *1:1 0.004
+*RES
+1 *1 *4 12.5
+2 *4 *2 18.9
+3 *2:3 *5:1 24.1
+*END
+
+*D_NET *7 0.0130
+*CONN
+*P *7 I *C 1.1e-15 0.0e+00
+*I *8 O *C 1.0e-15 0.0e+00
+*I *9 B *C 1.0e-15 0.0e+00
+*I *10 O *C 1.0e-15 0.0e+00
+*CAP
+1 *7 0.0009
+2 *7:1 *8:1 0.0011
+3 *9 *6 0.0007
+4 *8 *10 0.0015
+5 *7 *7:1 0.05
+*RES
+1 *7 *9 8.2
+2 *9 *8 5.9
+3 *8 *10 6.4
+*END
